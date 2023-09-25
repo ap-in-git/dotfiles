@@ -1,0 +1,8 @@
+require('dashboard').setup({
+})
+
+vim.api.nvim_set_hl(0, 'DashboardHeader', { fg = '#6272a4' })
+vim.api.nvim_set_hl(0, 'DashboardDesc', { fg = '#f8f8f2' })
+vim.api.nvim_set_hl(0, 'DashboardIcon', { fg = '#bd93f9' })
+vim.api.nvim_set_hl(0, 'DashboardKey', { fg = '#6272a4' })
+vim.api.nvim_set_hl(0, 'DashboardFooter', { fg = '#6272a4' })
