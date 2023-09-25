@@ -7,4 +7,6 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.mouse = 'a'
 vim.opt.fillchars:append({ eob = ' ' })
+vim.opt.list = true
+vim.opt.listchars = { tab = '▸ ', trail = '·' }
 

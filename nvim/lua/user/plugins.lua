@@ -20,6 +20,13 @@ local default_plugins = {
   end,
 },
 {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require('user/plugins/lualine')
+		end,
+  },
+{
   'nvim-treesitter/nvim-treesitter',
   build = function()
     require('nvim-treesitter.install').update({ with_sync = true })
