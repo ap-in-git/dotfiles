@@ -1,6 +1,20 @@
 #!/usr/bin/env sh
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Neovim
+rm -rf $HOME/.config/nvim
 
+# Remove lazy directory
+if [ -d ~/.local/state/nvim/lazy ]; then
+    rm -r ~/.local/state/nvim/lazy
+fi
+if [ -d ~/.local/share/nvim/lazy ]; then
+    rm -r ~/.local/share/nvim/lazy
+fi
+
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# Kitty
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty

@@ -20,6 +20,20 @@ local default_plugins = {
   end,
 },
 {
+  'nvim-treesitter/nvim-treesitter',
+  build = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  dependencies = {
+    'nvim-treesitter/playground',
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
+  config = function()
+    require('user/plugins/treesitter')
+  end,
+},
+{
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
 
 dependencies = { 'nvim-lua/plenary.nvim' ,{    
