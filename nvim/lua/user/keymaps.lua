@@ -1,7 +1,7 @@
 -- User jk to escape from insert mode
 local options = { noremap = true }
 vim.keymap.set("i", "jk", "<Esc>", options)
-vim.keymap.set('n','<leader>of',':browse oldfiles<CR>')
+
 -- Telescope related Key maps
 vim.keymap.set('n', '<leader>f', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
 vim.keymap.set('n', '<leader>F', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])

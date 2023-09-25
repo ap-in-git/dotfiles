@@ -33,6 +33,12 @@ local default_plugins = {
     require('user/plugins/treesitter')
   end,
 },
+	{'akinsho/bufferline.nvim', 
+		config = function()
+		 require('user/plugins/bufferline')
+		end,
+		version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
+	},
 {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
 
